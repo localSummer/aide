@@ -69,11 +69,13 @@ export const buildGeneratePrompt = async ({
     .concat(defaultPromptList)
     .map(item => {
       const title = item.title ? item.title : item.prompt.split('\n')[0]!
+      const description = item.description ? item.description : ''
       const match = item.match ?? '**/*'
 
       return {
         ...item,
         title,
+        description,
         match
       }
     })
@@ -87,7 +89,10 @@ export const buildGeneratePrompt = async ({
     })
 
   const selected = await showQuickPickWithCustomInput({
-    items: matchedPrompts.map(item => item.title) as string[],
+    items: matchedPrompts.map(item => ({
+      label: item.title,
+      description: item.description
+    })),
     placeholder: t('input.expertCodeEnhancer.selectPrompt.title')
   })
 

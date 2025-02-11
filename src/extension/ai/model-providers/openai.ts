@@ -22,7 +22,7 @@ export class OpenAIModelProvider extends BaseModelProvider<
         fetch
       },
       model: openaiModel,
-      temperature: 0.95, // never use 1.0, some models do not support it
+      temperature: 0.3, // never use 1.0, some models do not support it
       maxRetries: 3,
       verbose: isDev
     })

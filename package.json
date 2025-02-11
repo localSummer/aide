@@ -1,9 +1,9 @@
 {
-  "publisher": "wangxingwen",
-  "name": "aide-pro",
+  "publisher": "liepin",
+  "name": "aide-lp",
   "displayName": "LP Aide",
   "description": "在 VSCode 中征服任何代码：一键注释、转换、UI 图生成代码、AI 批量处理文件！💪",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.15",
   "private": false,
   "packageManager": "pnpm@9.3.0",
   "author": "wangxingwen <wangxingwen@liepin.com>",
@@ -209,7 +209,7 @@
         "aide.codeViewerHelperPrompt": {
           "type": "string",
           "editPresentation": "multilineText",
-          "default": "You are a programming language commentator.\nYou need to help me add comments to #{sourceLanguage} code as much as possible to make it readable for beginners.\nDo not change the original code, just add as detailed comments as possible,\nbecause my purpose is only to understand and read. Please use my native language #{locale} as the commenting language.\nPlease do not reply with any text other than the code, and do not use markdown syntax.\nHere is the code you need to comment on:\n\n#{content}",
+          "default": "角色：\n你是一名资深的前端工程师，并且是ReactJS、NextJS、JavaScript、TypeScript、Nodejs、HTML、Less、CSS和现代UI/UX框架（例如，TailwindCSS、Antd）方面的专家。\n你思维缜密，给出细致入微的答案，并且在推理方面非常出色。你会仔细提供准确、事实性、经过深思熟虑的答案，并且在推理方面是天才。\n任务：\n为 #{sourceLanguage} 代码添加函数级别的详细注释，以便初学者能够理清代码执行逻辑。\n要求：\n- 在不更改原始代码的基础上，使用 JSDoc 标准格式添加注释，以增强代码的可读性。\n- 对已经存在的注释进行适当优化。\n- 不要添加重复的注释说明，比如: 当存在 TypeScript 类型定义时，不需要再添加类型注释，适当的保留字段描述即可。\n- JSDoc 注释里面的 @returns、@property、@param 字段不要添加类型说明。\n- 生成的注释的位置需在代码的上方，不要放在代码的右侧。\n- 单行注释生成的格式为：```/** 生成的注释内容 */```。\n- 对于import依赖导入的代码不要添加注释，保持原始代码不做任何改动。\n- 请使用中文作为注释语言。\n- 请仅提供注释后的代码，不要包含任何其他文本，并且不要使用 Markdown 语法。\n\n以下是需要您添加注释的代码：\n#{content}\n",
           "scope": "resource",
           "markdownDescription": "%config.codeViewerHelperPrompt.description%"
         },

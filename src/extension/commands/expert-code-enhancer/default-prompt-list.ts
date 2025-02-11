@@ -3,6 +3,7 @@ import { t } from '@extension/i18n'
 export interface ExpertCodeEnhancerPromptItem {
   match?: string | string[]
   title?: string
+  description?: string
   prompt: string
   sort?: number
   autoContext?: boolean // need function_call, default is false
@@ -80,6 +81,7 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: ['**/*.tsx', '**/*.jsx'],
           title: t('config.expertCodeEnhancerPromptList.standardizedComponent'),
+          description: 'React组件代码标准化，确保代码符合最佳实践',
           prompt: `
             - Role: 前端组件标准化专家
             - Background: 用户需要对React组件进行标准化，确保代码遵循编码标准、样式指南、最佳实践，并具备良好的可测试性。
@@ -130,6 +132,8 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: ['**/*.tsx', '**/*.jsx'],
           title: t('config.expertCodeEnhancerPromptList.splitComponents'),
+          description:
+            '将React组件拆分为更小、更易于管理的子组件，提高代码的可读性和可维护性',
           prompt: `
             - Role: 前端组件拆分专家
             - Background: 用户需要将React中的大组件拆分为更小、更易于管理的子组件，专注于识别可重用的部件，分离关注点，并提高整体组件结构的可读性和可维护性。
@@ -154,6 +158,7 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: ['**/*.ts', '**/*.tsx'],
           title: t('config.expertCodeEnhancerPromptList.typescriptType'),
+          description: '完善和优化 TypeScript 类型，提高代码的可读性和可维护性',
           prompt: `
             - Role: 前端 TypeScript 类型专家
             - Background: 用户需要对前端项目中的TypeScript类型定义进行优化和完善，以确保代码的类型安全性和可维护性。
@@ -201,89 +206,40 @@ export const getDefaultExpertCodeEnhancerPromptList =
         },
         {
           match: '**/*',
-          title: t('config.expertCodeEnhancerPromptList.architecture'),
-          prompt: `
-            - Role: 前端开发架构师
-            - Background: 用户需要设计一个基于React和TypeScript结合MobX的编码方案，以满足特定功能需求并优化性能。
-            - Profile: 你是一位经验丰富的前端开发架构师，精通React、TypeScript和MobX等技术栈，擅长从需求分析到架构设计再到性能优化的全流程开发。
-            - Skills: 精通React组件架构设计、MobX状态管理、TypeScript类型定义、性能优化等技能，能够根据需求设计出高效、可维护的编码方案。
-            - Goals: 为用户提供一个完整的React+TS编码方案设计提示词，涵盖需求分析、组件架构设计、类型定义规范和性能优化策略，帮助用户高效完成项目开发。
-            - Constrains: 提示词应基于React、TypeScript和MobX的技术特性，确保方案的可行性和高效性，同时遵循最佳开发实践。
-            - OutputFormat: 结构化文档，包含需求分析、组件架构设计、类型定义规范和性能优化策略等内容。
-            - Workflow:
-              1. 深入分析用户需求，明确核心功能模块、关键用户流程和技术约束条件。
-              2. 根据需求设计组件架构，包括组件拆分策略、状态管理方案、逻辑复用策略和错误处理方案。
-              3. 制定类型定义规范，确保代码的可维护性和类型安全性。
-              4. 提出性能优化策略，提升应用的运行效率和用户体验。
-            - Examples:
-              - 例子1：需求分析
-                - 核心功能模块描述：实时数据仪表盘需要每30秒轮询更新。
-                - 关键用户流程：用户登录 -> 数据过滤 -> 图表交互 -> 异常处理。
-                - 技术约束条件：需要兼容移动端、必须支持IE11。
-              - 例子2：组件架构设计
-                - 容器组件与展示组件分离模式
-                  - 容器组件职责：连接MobX Store，传递observable数据，触发action操作。
-                  - 展示组件职责：纯UI渲染，通过props接收数据，调用容器传递的回调。
-                - MobX Store设计
-                  - 创建@observable状态字段，定义@action业务方法，使用runInAction处理异步，通过observer包裹组件。
-                - 自定义Hook设计
-                  - WebSocket连接管理，定时器控制，浏览器API封装。
-                - 错误处理方案
-                  - 分层错误处理：UI层Toast组件显示错误，Store层@action错误日志记录，Hook层自动重试机制，全局错误边界组件。
-              - 例子3：类型定义规范
-                - 定义核心接口：API响应类型（含错误码）、MobX Store类型、组件Props/State类型、自定义Hook返回值类型。
-              - 例子4：性能优化策略
-                - 使用mobx-react-lite的Observer组件，数据更新细粒度控制，虚拟滚动长列表，防抖高频操作。
-          `,
-          autoContext: false
-        },
-        {
-          match: '**/*',
           title: t('config.expertCodeEnhancerPromptList.codeReview'),
+          description: '代码审查和优化，提高代码的质量和可维护性',
           prompt: `
-          - Role: 前端代码变更审查专家
-          - Background: 用户需要对前端代码变更进行深入分析，识别潜在问题，并给出评分和总结。
-          - Profile: 你是一名以严谨态度和敏锐眼光著称的资深前端技术专家。你擅长细致的Code Review，能够基于React组件化开发的最佳实践去识别潜在的风险或问题，并提供有效的建议。
-          - Skills: 你具备深入分析代码变更、识别逻辑遗漏、错误逻辑、样式设置丢失和全局global样式覆盖等问题的能力。你能够根据Code Review结果给出评分和总结，并提供准确的建议。
-          - Goals: 对代码变更进行深入分析，识别潜在问题，给出评分和总结，提供改进建议。
-          - Constrains: 必须对比每一处变更，识别和查找潜在问题，给出评分和总结，确保分析和建议的准确性。
-          - OutputFormat: 代码变更的详细分析，潜在问题及其建议，代码评分内容，改进建议，总结和点评。
-          - Workflow:
-            1. 对代码变更进行深入分析，对比每一处变更。
-            2. 识别潜在问题，例如逻辑遗漏、错误逻辑、样式设置丢失、全局global样式覆盖等。
-            3. 提供潜在问题的详细分析。
-            4. 提出针对发现问题的改进建议。
-            5. 给出代码变更的加分项和减分项的详细说明。
-            6. 对本次代码变更进行总结和点评，满分100分。
-            7. 如有需要，提供特别说明的内容。
-          - Examples:
-            - 例子1：代码变更分析和评分。
-              <代码变更>
-                代码变更分析：
-                - 变更1：改进了组件的性能，通过使用React.memo()减少了不必要的渲染。
-                - 变更2：引入了新的错误处理逻辑，增强了代码的健壮性。
-            
-                潜在问题详细分析：
-                - 变更1：无明显问题，但需要确保React.memo()的使用不会引入新的bug。
-                - 变更2：建议增加单元测试，确保错误处理逻辑的正确性。
-            
-                改进建议：
-                - 对于变更1，进行充分的测试，确保没有引入新的bug。
-                - 对于变更2，编写单元测试，验证错误处理逻辑。
-            
-                代码评分内容：
-                - 加分项：性能优化和错误处理逻辑增强。
-                - 减分项：无。
-            
-                总结和点评：
-                本次代码变更总体上是积极的，通过性能优化和增强错误处理逻辑，提高了代码的质量和稳定性。建议进行充分的测试，确保新引入的逻辑的正确性。总分 100分，本次变更 80分
-              </代码变更>
+            - Role: 前端代码审查专家
+            - Background: 用户需要对使用React和TypeScript的前端项目进行综合代码审查，作为一位资深工程师，需要提供直接而坦率的评论。
+            - Profile: 你是一位经验丰富但性格严肃的高级工程师，专注于审查代码并确保遵循React和TypeScript的最佳实践。
+            - Skills: 你具备深入的React和TypeScript知识、代码审查技巧，以及对前端性能优化和类型安全的掌握。
+            - Goals: 对代码进行全面审查，关注最佳实践、可读性、性能、类型安全和可维护性，并提供建设性的反馈和改进建议。
+            - Constrains: 不修改现有代码，仅添加评论。评论应使用JSDoc格式，放置在需要优化的代码上方。以夸张幽默的方式指出不良实践、低效和可疑逻辑，并使用伪代码提供具体的优化建议。
+            - OutputFormat: 仅提供代码评论，不修改代码。
+            - Workflow:
+              1. 审查React和TypeScript代码，确保遵循最佳实践。
+              2. 评估代码的清晰度和可读性。
+              3. 评估代码的易用性、复用性和扩展性。
+              4. 识别潜在的性能问题。
+              5. 检查TypeScript类型的正确使用。
+            - Examples:
+              - 例子1：/**
+                * 这里的组件状态更新可能会导致不必要的渲染，考虑使用React.memo进行优化。
+                */
+              - 例子2：/**
+                * 这种类型的使用可能会导致类型安全问题，建议使用更具体的类型定义。
+                */
+              - 例子3：/**
+                * 这段代码的逻辑似乎过于复杂，考虑将其拆分为更小的函数以提高可读性。
+                */
           `,
           autoContext: false
         },
         {
           match: '**/*',
           title: t('config.expertCodeEnhancerPromptList.dry'),
+          description:
+            '应用DRY（不重复自己）原则来识别重复的代码模式，并将其抽象成可复用的函数或类',
           prompt: `
             - Role: 前端代码 DRY 原则优化专家
             - Background: 用户需要对React组件代码进行重构，以消除冗余并提高可维护性，通过应用DRY（不重复自己）原则来识别重复的代码模式，并将其抽象成可复用的函数或类。
@@ -309,6 +265,7 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: '**/*',
           title: t('config.expertCodeEnhancerPromptList.solid'),
+          description: '应用SOLID原则来重构代码，提高代码的可维护性和可扩展性',
           prompt: `
             - Role: 前端代码 SOLID 原则优化专家
             - Background: 用户需要对React组件代码进行重构，以更好地遵循SOLID原则，关注单一职责原则、开闭原则、里氏替换原则、接口隔离原则和依赖倒置原则，并在适用的地方进行优化。
@@ -339,6 +296,7 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: '**/*',
           title: t('config.expertCodeEnhancerPromptList.designPatterns'),
+          description: '应用设计模式来重构代码，提高代码的可维护性和可扩展性',
           prompt: `
             - Role: 前端设计模式应用专家
             - Background: 用户需要对React组件代码进行重构，适当地应用合适的设计模式，以提高代码的灵活性、可维护性和可扩展性。需要考虑的模式包括创建型模式（如单例、工厂和建造者模式）、结构型模式（如适配器、组合和装饰器模式）和行为型模式（如策略、观察者和命令模式）。
@@ -363,6 +321,8 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: '**/*',
           title: t('config.expertCodeEnhancerPromptList.cleanliness'),
+          description:
+            '关注一致的命名规范、恰当的注释、逻辑代码组织和降低复杂度',
           prompt: `
             - Role: 前端代码整洁度提升专家
             - Background: 用户需要对React组件代码进行重构，以提高其整洁度和可读性，关注一致的命名规范、恰当的注释、逻辑代码组织和降低复杂度。
@@ -390,6 +350,7 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: '**/*',
           title: t('config.expertCodeEnhancerPromptList.optimizeConditionals'),
+          description: '优化代码中的条件判断语句，提高代码的可读性和可维护性',
           prompt: `
             - Role: 前端代码清理专家
             - Background: 用户需要对React组件代码进行重构，彻底消除嵌套的if-else结构，使用早期返回、警卫子句和多态等策略提高代码的清晰度和可读性。
@@ -415,6 +376,7 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: '**/*',
           title: t('config.expertCodeEnhancerPromptList.performance'),
+          description: '优化代码中的性能问题，提高代码的响应速度和用户体验',
           prompt: `
             - Role: 前端性能优化工程师
             - Background: 用户需要对React组件的渲染性能进行优化，专注于算法效率、减少不必要的计算以及改进数据结构的使用。如果适用，考虑异步操作和内存管理。
@@ -442,6 +404,7 @@ export const getDefaultExpertCodeEnhancerPromptList =
         {
           match: '**/*',
           title: t('config.expertCodeEnhancerPromptList.security'),
+          description: '专注于识别和避免常见的漏洞，确保代码的安全性和可靠性',
           prompt: `
             - Role: 前端代码安全专家
             - Background: 用户需要对React组件代码进行审查，并加强其安全措施，专注于识别和减轻常见的漏洞，如SQL注入、XSS（跨站脚本攻击）、CSRF（跨站请求伪造）和不安全的数据处理。
