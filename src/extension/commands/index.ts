@@ -10,7 +10,7 @@ import { handleExpertCodeEnhancer } from './expert-code-enhancer'
 import { handleCopyFileText } from './private/copy-file-text'
 import { handleQuickCloseFileWithoutSave } from './private/quick-close-file-without-save'
 import { handleReplaceFile } from './private/replace-file'
-import { handleShowAideKeyUsageInfo } from './private/show-aide-key-usage-info'
+// import { handleShowAideKeyUsageInfo } from './private/show-aide-key-usage-info'
 import { handleShowDiff } from './private/show-diff'
 import { handleRenameVariable } from './rename-variable'
 import { handleSmartPaste } from './smart-paste'
@@ -80,10 +80,10 @@ export const registerCommands = async (context: vscode.ExtensionContext) => {
   )
 
   // private command
-  const showAideKeyUsageInfoDisposable = vscode.commands.registerCommand(
-    'aide.showAideKeyUsageInfo',
-    commandErrorCatcher(handleShowAideKeyUsageInfo)
-  )
+  // const showAideKeyUsageInfoDisposable = vscode.commands.registerCommand(
+  //   'aide.showAideKeyUsageInfo',
+  //   commandErrorCatcher(handleShowAideKeyUsageInfo)
+  // )
 
   context.subscriptions.push(
     copyDisposable,
@@ -97,7 +97,7 @@ export const registerCommands = async (context: vscode.ExtensionContext) => {
     copyFileTextDisposable,
     quickCloseFileWithoutSaveDisposable,
     replaceFileDisposable,
-    showDiffDisposable,
-    showAideKeyUsageInfoDisposable
+    showDiffDisposable
+    // showAideKeyUsageInfoDisposable
   )
 }

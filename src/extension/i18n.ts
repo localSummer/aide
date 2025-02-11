@@ -1,21 +1,23 @@
-import * as vscode from 'vscode'
+// import * as vscode from 'vscode'
 
 // locale files
-import en from '../../package.nls.en.json'
+// import en from '../../package.nls.en.json'
 import zhCn from '../../package.nls.zh-cn.json'
 import { LocalizeFunction, Messages } from './types/common'
 
-const localeFilesMap = {
-  en,
-  'zh-cn': zhCn
-}
+// const localeFilesMap = {
+//   en,
+//   'zh-cn': zhCn
+// }
 
 let messages: Messages = {}
 
 export const initializeLocalization = async (): Promise<void> => {
-  const { language } = vscode.env
+  // const { language } = vscode.env
 
-  messages = localeFilesMap[language as keyof typeof localeFilesMap] ?? en
+  // messages = localeFilesMap[language as keyof typeof localeFilesMap] ?? en
+
+  messages = zhCn
 }
 
 const format = (message: string, args: any[]): string =>

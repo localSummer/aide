@@ -1,8 +1,13 @@
 {
   "i18n-ally.pathMatcher": "package.nls.{locale}.json",
   "i18n-ally.keystyle": "flat",
-  "i18n-ally.localesPaths": ["."],
-  "i18n-ally.enabledFrameworks": ["vscode", "react"],
+  "i18n-ally.localesPaths": [
+    "."
+  ],
+  "i18n-ally.enabledFrameworks": [
+    "vscode",
+    "react"
+  ],
   "i18n-ally.dirStructure": "file",
   // Enable eslint for all supported languages
   "eslint.validate": [
@@ -80,5 +85,11 @@
     "vsix",
     "Xclip",
     "Zhipu"
-  ]
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
