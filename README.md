@@ -1,77 +1,45 @@
 <div align="center">
 
-<a href="https://aide.nicepkg.cn">
+<a href="https://aide.nicepkg.cn/zh/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/78b89b18-0846-4885-89f2-8238fac1db49">
     <img src="https://github.com/user-attachments/assets/40ed79a5-d415-4f36-907e-63753995305b" alt="nicepkg" width="400" />
   </picture>
 </a>
 
-English / [简体中文](https://github.com/nicepkg/aide/tree/master/README_CN.md) / [日本語](https://github.com/nicepkg/aide/tree/master/README_JP.md)
-
-Conquer Any Code in VSCode: One-Click Comments, Conversions, UI-to-Code, and AI Batch Processing of Files! 💪
+</div>
 
 在 VSCode 中征服任何代码：一键注释、转换、UI 图生成代码、AI 批量处理文件！💪
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/nicepkg.aide-pro)](https://marketplace.visualstudio.com/items?itemName=nicepkg.aide-pro)
-[![Downloads](https://img.shields.io/visual-studio-marketplace/d/nicepkg.aide-pro)](https://marketplace.visualstudio.com/items?itemName=nicepkg.aide-pro)
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/nicepkg.aide-pro)](https://marketplace.visualstudio.com/items?itemName=nicepkg.aide-pro)
-[![License](https://img.shields.io/github/license/nicepkg/aide)](https://github.com/nicepkg/aide/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/nicepkg/aide)](https://github.com/nicepkg/aide)
+## 文档 📚
 
-</div>
-
-## Document 📚
-
-- See: [https://aide.nicepkg.cn](https://aide.nicepkg.cn)
-- Video:
+- 查看：[https://aide.nicepkg.cn/zh](https://aide.nicepkg.cn/zh)
+- 视频：
 
 https://github.com/user-attachments/assets/55f85f8e-7515-4da3-b850-9c078b3440d5
 
-## Features ✨
+## 功能 ✨
 
-- 🔄 **[Code Convert](https://aide.nicepkg.cn/guide/features/code-convert)**: Transform code between any programming languages with one click.
-- 📖 **[Code Viewer Helper](https://aide.nicepkg.cn/guide/features/code-viewer-helper)**: Add detailed comments to enhance code readability.
-- 🔧 **[Expert Code Enhancer](https://aide.nicepkg.cn/guide/features/expert-code-enhancer)**: Hand your code over to AI for optimization and see how an expert would write it.
-- 📋 **[Smart Paste](https://aide.nicepkg.cn/guide/features/smart-paste)**: Intelligently convert clipboard content (code or images) when pasting.
-- 🗂️ **[AI Batch Processor](https://aide.nicepkg.cn/guide/features/batch-processor)**: Process multiple files using AI according to custom requirements.
-- 🏷 **[Rename Variable](https://aide.nicepkg.cn/guide/features/rename-variable)**: Get AI-suggested variable names with explanations.
-- 💬 **[Ask AI](https://aide.nicepkg.cn/guide/features/ask-ai)**: Execute custom AI commands on selected files or folders.
-- 📝 **[Copy as AI Prompt](https://aide.nicepkg.cn/guide/features/copy-as-prompt)**: Easily copy files/folders content as AI prompts.
+- 🔄 **[代码转换](https://aide.nicepkg.cn/zh/guide/features/code-convert)**: 一键在任何编程语言之间转换代码。
+- 📖 **[代码查看器助手](https://aide.nicepkg.cn/zh/guide/features/code-viewer-helper)**: 添加详细注释以提高代码可读性。
+- 🔧 **[让专家帮你改代码](https://aide.nicepkg.cn/zh/guide/features/expert-code-enhancer)**: 把你的代码给 AI 优化，看看大师是怎么写代码的。
+- 📋 **[智能粘贴](https://aide.nicepkg.cn/zh/guide/features/smart-paste)**: 粘贴时智能转换剪贴板内容（代码或图片）。
+- 🗂️ **[AI 批量处理文件](https://aide.nicepkg.cn/zh/guide/features/batch-processor)**: 根据自定义要求使用 AI 处理多个文件。
+- 🏷 **[重命名变量](https://aide.nicepkg.cn/zh/guide/features/rename-variable)**: 获取 AI 建议的变量名及解释。
+- 💬 **[问 AI](https://aide.nicepkg.cn/zh/guide/features/ask-ai)**: 对选定的文件或文件夹执行自定义 AI 命令。
+- 📝 **[复制为 AI 提示词](https://aide.nicepkg.cn/zh/guide/features/copy-as-prompt)**: 轻松复制文件/文件夹内容作为 AI 提示。
 
-## Installation 📦
+## 安装 📦
 
-1. Open Visual Studio Code
-2. Go to Extensions (Ctrl+Shift+X)
-3. Search for "[Aide](https://marketplace.visualstudio.com/items?itemName=nicepkg.aide-pro)"
-4. Click Install
+1. 打开 Visual Studio Code
+2. 打开命令窗口 (Command+Shift+P)
+3. 搜索 “扩展：从 VSIX 安装”
+4. 点击安装
 
-## ChangeLog 📅
+## 更新日志 📅
 
-See the [CHANGELOG](https://github.com/nicepkg/aide/blob/master/CHANGELOG.md) for the latest updates.
+查看最新的更新和功能：[更新日志](https://github.com/localSummer/aide/blob/master/CHANGELOG.md)
 
-## Contributing 🤝
+## 许可证 📄
 
-Contributions are welcome! Please feel free to submit a Pull Request. See the [Contributing Guide](https://github.com/nicepkg/aide/blob/master/CONTRIBUTING.md) for more details.
-
-This project exists thanks to all the people who contribute:
-
-<a href="https://github.com/nicepkg/aide/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nicepkg/aide" />
-</a>
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/nicepkg/aide/blob/master/LICENSE) file for details.
-
-## Support 💖
-
-If you find this project helpful, please consider giving it a ⭐️ on [GitHub](https://github.com/nicepkg/aide)!
-
-## Star History ⭐
-
-<div align="center">
-
-<img src="https://api.star-history.com/svg?repos=nicepkg/aide&type=Date" width="600" height="400" alt="Star History Chart" valign="middle">
-
-</div>
+此项目根据 MIT 许可证授权

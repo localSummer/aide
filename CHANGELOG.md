@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0(2025-02-11)
+* 扩展和优化让专家帮你改代码功能
+* 配置优化，降低用户使用成本
+
 ## [1.19.1](https://github.com/nicepkg/aide/compare/aide-v1.19.0...aide-v1.19.1) (2024-11-12)
 
 
