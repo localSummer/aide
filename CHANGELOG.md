@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.0-beta.27(2025-02-12)
+* 重新设计 Aide Code Vonvert 功能
+
 ## 2.0.0-beta.25(2025-02-12)
 * 集成 Repomix Cli插件
 * 优化 Aide Copy As AI Prompt 功能
