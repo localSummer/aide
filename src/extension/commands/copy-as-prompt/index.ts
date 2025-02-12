@@ -1,5 +1,5 @@
 import { getConfigKey } from '@extension/config'
-import { getFileOrFoldersPromptInfo } from '@extension/file-utils/get-fs-prompt-info'
+import { getFileOrFoldersPromptInfoByRepomix } from '@extension/file-utils/get-fs-prompt-info'
 import { t } from '@extension/i18n'
 import * as vscode from 'vscode'
 
@@ -14,7 +14,7 @@ export const handleCopyAsPrompt = async (
   if (selectedItems.length === 0) throw new Error(t('error.noSelection'))
 
   const selectedFileOrFolders = selectedItems.map(item => item.fsPath)
-  const { promptFullContent } = await getFileOrFoldersPromptInfo(
+  const { promptFullContent } = await getFileOrFoldersPromptInfoByRepomix(
     selectedFileOrFolders,
     workspaceFolder.uri.fsPath
   )
