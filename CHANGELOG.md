@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.0-beta.28(2025-02-13)
+* 优化 Aide Copy As AI Prompt 功能，输出为 AI 易读的 markdown 文件
+
 ## 2.0.0-beta.27(2025-02-12)
 * 重新设计 Aide Code Vonvert 功能
 

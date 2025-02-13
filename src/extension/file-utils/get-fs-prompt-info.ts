@@ -85,7 +85,7 @@ export const getFileOrFoldersPromptInfoByRepomix = async (
   const filesOrFoldersString = absoluteFileOrFolders.join(',')
 
   // Start building the repomix command
-  const repomixCommand = `npx repomix --include "${filesOrFoldersString}" --output ${repomixFileName}`
+  const repomixCommand = `npx repomix --include "${filesOrFoldersString}" --output ${repomixFileName} --style markdown`
 
   try {
     // Execute the repomix command to get the prompt data
