@@ -82,4 +82,4 @@ export const languageExtIdMap = Object.fromEntries(
 export const AbortError = new Error('AbortError')
 
 /** Aide copy as ai prompt filename */
-export const repomixFileName = 'aide-code-prompt.txt'
+export const repomixFileName = 'aide-code-prompt.md'
