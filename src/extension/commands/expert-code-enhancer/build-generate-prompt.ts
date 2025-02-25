@@ -4,6 +4,7 @@ import { AbortError } from '@extension/constants'
 import { getFileOrFoldersPromptInfo } from '@extension/file-utils/get-fs-prompt-info'
 import { t } from '@extension/i18n'
 import { createLoading } from '@extension/loading'
+import { AI_CODE_MARK_PROMPT } from '@extension/prompts'
 import { cacheFn } from '@extension/storage'
 import { showQuickPickWithCustomInput } from '@extension/utils'
 import type { BaseLanguageModelInput } from '@langchain/core/language_models/base'
@@ -135,6 +136,7 @@ export const buildGeneratePrompt = async ({
     : []
 
   const allInstructions = [
+    AI_CODE_MARK_PROMPT,
     ...baseInstructions,
     ...selectionInstructions,
     ...contextInstructions
