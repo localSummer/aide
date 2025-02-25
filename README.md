@@ -1,22 +1,5 @@
-<div align="center">
-
-<a href="https://aide.nicepkg.cn/zh/">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/78b89b18-0846-4885-89f2-8238fac1db49">
-    <img src="https://github.com/user-attachments/assets/40ed79a5-d415-4f36-907e-63753995305b" alt="nicepkg" width="400" />
-  </picture>
-</a>
-
-</div>
-
+## 简介
 在 VSCode 中征服任何代码：一键注释、转换、UI 图生成代码、AI 批量处理文件！💪
-
-## 文档 📚
-
-- 查看：[https://aide.nicepkg.cn/zh](https://aide.nicepkg.cn/zh)
-- 视频：
-
-https://github.com/user-attachments/assets/55f85f8e-7515-4da3-b850-9c078b3440d5
 
 ## 功能 ✨
 
