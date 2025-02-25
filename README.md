@@ -21,7 +21,7 @@
 
 ## 更新日志 📅
 
-查看最新的更新和功能：[更新日志](https://github.com/localSummer/aide/blob/master/CHANGELOG.md)
+查看最新的更新和功能：[更新日志](https://github.com/localSummer/aide/blob/lp/CHANGELOG.md)
 
 ## 许可证 📄
 

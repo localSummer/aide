@@ -3,22 +3,18 @@
   "name": "code-assistant",
   "displayName": "LP Code Assistant",
   "description": "在 VSCode 中征服任何代码：一键注释、转换、UI 图生成代码、AI 批量处理文件！💪",
-  "version": "2.0.0-beta.38",
+  "version": "2.0.0-beta.39",
   "private": false,
   "packageManager": "pnpm@9.3.0",
   "author": "wangxingwen <wangxingwen@liepin.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/2214962083",
-  "homepage": "https://github.com/localSummer/aide#readme",
+  "homepage": "https://github.com/localSummer/aide/tree/lp#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/localSummer/aide"
+    "url": "https://github.com/localSummer/aide/tree/lp"
   },
   "bugs": {
     "url": "https://github.com/localSummer/aide/issues"
-  },
-  "sponsor": {
-    "url": "https://github.com/sponsors/2214962083"
   },
   "keywords": [
     "prompt",
