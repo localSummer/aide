@@ -107,6 +107,9 @@ export const getFileOrFoldersPromptInfoByRepomix = async (
       vscode.Uri.file(repomixFilePath)
     )
 
+    // Delete the repomix file after reading the prompt data
+    await vscode.workspace.fs.delete(vscode.Uri.file(repomixFilePath))
+
     // Parse the prompt data and update the result object
     const promptDataString = promptData.toString()
     result.promptFullContent = promptDataString

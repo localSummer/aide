@@ -1,14 +1,17 @@
 # Changelog
 
+## 2.0.0-beta.30(2025-02-25)
+* 删除 Copy As Prompt 生成的临时文件
+
 ## 2.0.0-beta.28(2025-02-13)
-* 优化 Aide Copy As AI Prompt 功能，输出为 AI 易读的 markdown 文件
+* 优化 Aide Copy As Prompt 功能，输出为 AI 易读的 markdown 文件
 
 ## 2.0.0-beta.27(2025-02-12)
-* 重新设计 Aide Code Vonvert 功能
+* 重新设计 Aide Code Convert 功能
 
 ## 2.0.0-beta.25(2025-02-12)
-* 集成 Repomix Cli插件
-* 优化 Aide Copy As AI Prompt 功能
+* 集成 Copy As Prompt 扩展功能
+* 优化 Aide Copy As Prompt 功能
 
 ## 2.0.0(2025-02-11)
 * 扩展和优化让专家帮你改代码功能
