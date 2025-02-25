@@ -3,7 +3,7 @@
   "name": "code-assistant",
   "displayName": "LP Code Assistant",
   "description": "在 VSCode 中征服任何代码：一键注释、转换、UI 图生成代码、AI 批量处理文件！💪",
-  "version": "2.0.0-beta.36",
+  "version": "2.0.0-beta.37",
   "private": false,
   "packageManager": "pnpm@9.3.0",
   "author": "wangxingwen <wangxingwen@liepin.com>",
@@ -188,12 +188,12 @@
         },
         "aide.openaiModel": {
           "type": "string",
-          "default": "gpt-4o",
+          "default": "deepseek-coder",
           "markdownDescription": "%config.openaiModel.description%"
         },
         "aide.openaiBaseUrl": {
           "type": "string",
-          "default": "https://api.openai.com/v1",
+          "default": "https://api.deepseek.com/v1",
           "markdownDescription": "%config.openaiBaseUrl.description%"
         },
         "aide.apiConcurrency": {
