@@ -19,6 +19,7 @@ export const AI_CODE_MARK_PROMPT = `
     - 在代码中添加注释标记，确保标记的格式一致且清晰。
     - 对于函数和 React 组件，注释标记应位于定义的开头和结尾。
     - 对于代码块，注释标记应位于代码块的开始和结束位置。
+    - 仅添加注释标记，请不要输出任何注释标记之外的文本，并且不要使用 Markdown 语法。
   - Workflow:
     1. 检查代码中的函数、方法、React 组件和代码块是否已经包含 "/** @region:auto-optimized */" 和 "/** @region:end */" 注释标记。
     2. 如果未包含，则在函数或组件定义的开头添加 "/** @region:auto-optimized */"，在结尾添加 "/** @region:end */"。
